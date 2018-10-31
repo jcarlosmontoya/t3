@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!--Formulario para conductor-->
+        <record id="conductor_form_view" model="ir.ui.view">
+            <field name="name">conductor.form.view</field>
+            <field name="model">viajes.conductor</field>
+            <field name="arch" type="xml">
+                <form string="Conductor Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="pais"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--List view Conductor-->
+        <record id="conductor_tree_view" model="ir.ui.view">
+            <field name="name">conductor.tree.view</field>
+            <field name="model">viajes.conductor</field>
+            <field name="arch" type="xml">
+                <tree string="Conductor Tree">
+                    <field name="name"/>
+                    <field name="pais"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Action view lanzar conductor-->
+        <record id="action_conductor_view" model="ir.actions.act_window">
+            <field name="name">Conductor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">viajes.conductor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--Menus para conductor y App Viajes-->
+        <menuitem id="gestion_viajes_root"
+                  name="Gestion Viajes"
+                  sequence="1"/>
+        <menuitem id="conductores_categ"
+                  name="Conductores"
+                  parent="gestion_viajes_root"
+                  sequence="1"/>
+        <menuitem id="conductores_menu_action"
+                  name="Conductores"
+                  parent="conductores_categ"
+                  action="action_conductor_view"
+                  sequence="1"/>
+    </data>
+</odoo>
