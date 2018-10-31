@@ -1,5 +1,62 @@
 <odoo>
-  <data>
+    <data>
+        <!--Formulario para vehiculo-->
+        <record id="vehiculo_form_view" model="ir.ui.view">
+            <field name="name">vehiculo.form.view</field>
+            <field name="model">viajes.vehiculo</field>
+            <field name="arch" type="xml">
+                <form string="vehiculo Form">
+                    <sheet>
+                        <group>
 
-  </data>
+                            <field name="image" class="oe_avatar" widget="image" nolabel="1"
+                                   options='{"size": [90, 90]}'/>
+
+                        </group>
+                        <group>
+                            <field name="name"/>
+                            <field name="conductor_id"/>
+
+                            <field name="matricula"/>
+                            <field name="anio"/>
+                            <field name="color"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--List view vehiculo-->
+        <record id="vehiculo_tree_view" model="ir.ui.view">
+            <field name="name">vehiculo.tree.view</field>
+            <field name="model">viajes.vehiculo</field>
+            <field name="arch" type="xml">
+                <tree string="vehiculo Tree">
+                    <field name="name"/>
+                    <field name="matricula"/>
+                    <field name="anio"/>
+                    <field name="color"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Action view lanzar vehiculo-->
+        <record id="action_vehiculo_view" model="ir.actions.act_window">
+            <field name="name">Vehiculos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">viajes.vehiculo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--Menus para vehiculo y App Viajes-->
+
+        <menuitem id="vehiculo_categ"
+                  name="Vehiculos"
+                  parent="gestion_viajes_root"
+                  sequence="2"/>
+        <menuitem id="vehiculo_menu_action"
+                  name="Vehiculos"
+                  parent="vehiculo_categ"
+                  action="action_vehiculo_view"
+                  sequence="1"/>
+    </data>
 </odoo>

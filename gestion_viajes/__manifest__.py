@@ -21,7 +21,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/conductor_view.xml',
-        # 'views/templates.xml',
+        'views/vehiculo_view.xml',
     ],
     'application': True,
 

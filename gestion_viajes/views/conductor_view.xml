@@ -7,9 +7,22 @@
             <field name="arch" type="xml">
                 <form string="Conductor Form">
                     <sheet>
+                        <div>
+                            <h2>
+                                <field name="total_trucks"/>
+                            </h2>
+                            <h3>
+
+                                <field name="name"/>
+                            </h3>
+
+                        </div>
                         <group>
-                            <field name="name"/>
                             <field name="pais"/>
+                        </group>
+                        <group string="Vehiculos">
+                            <!--<field name="truck_ids" widget="many2many_tags" nolabel="1"/>-->
+                            <field name="truck_ids" nolabel="1"/>
                         </group>
                     </sheet>
                 </form>
@@ -23,6 +36,7 @@
                 <tree string="Conductor Tree">
                     <field name="name"/>
                     <field name="pais"/>
+                    <field name="total_trucks"/>
                 </tree>
             </field>
         </record>
