@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <!--Herencia formulario vehiculo gestion_viajes -->
+        <record id="vehiculo_form_view_descripcion" model="ir.ui.view">
+            <field name="name">vehiculo.form.view.description</field>
+            <field name="model">viajes.vehiculo</field>
+            <field name="inherit_id" ref="gestion_viajes.vehiculo_form_view"/>
+            <field name="arch" type="xml">
+                <!--Donde coloco la descripcion -->
+                <field name="color" position="after">
+                    <field name="description"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
