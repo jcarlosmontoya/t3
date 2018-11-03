@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_extra-addons/t3/product_tipology_extra-addons/t3/product_tipology,extra-addons/t3/product_tipology.extra-addons/t3/product_tipology,model_extra-addons/t3/product_tipology_extra-addons/t3/product_tipology,,1,0,0,0
