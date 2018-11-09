@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gestion_viajes_gestion_viajes,gestion_viajes.gestion_viajes,model_gestion_viajes_gestion_viajes,,1,0,0,0
+access_gestion_viajes_conductor_users,gestion.viajes.conductor.users,model_viajes_conductor,group_gestion_viajes_user,1,1,0,0
+access_gestion_viajes_vehiculo_users,gestion.viajes.vehiculo.users,model_viajes_vehiculo,group_gestion_viajes_user,1,1,0,0
+access_gestion_viajes_conductor_manager,gestion.viajes.conductor.manager,model_viajes_conductor,group_gestion_viajes_manager,1,1,1,1
+access_gestion_viajes_vehiculo_manager,gestion.viajes.vehiculo.manager,gestion_viajes.model_viajes_vehiculo,group_gestion_viajes_manager,1,1,1,1

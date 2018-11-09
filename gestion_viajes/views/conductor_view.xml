@@ -52,13 +52,16 @@
         <!--Menus para conductor y App Viajes-->
         <menuitem id="gestion_viajes_root"
                   name="Gestion Viajes"
+                  groups="group_gestion_viajes_user,group_gestion_viajes_manager"
                   sequence="1"/>
         <menuitem id="conductores_categ"
                   name="Conductores"
+                  groups="group_gestion_viajes_user,group_gestion_viajes_manager"
                   parent="gestion_viajes_root"
                   sequence="1"/>
         <menuitem id="conductores_menu_action"
                   name="Conductores"
+                  groups="group_gestion_viajes_user,group_gestion_viajes_manager"
                   parent="conductores_categ"
                   action="action_conductor_view"
                   sequence="1"/>
