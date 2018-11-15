@@ -19,6 +19,8 @@
                         </div>
                         <group>
                             <field name="pais"/>
+                            <field name="licencia"/>
+                            <field name="fecha_caducidad"/>
                         </group>
                         <group string="Vehiculos">
                             <!--<field name="truck_ids" widget="many2many_tags" nolabel="1"/>-->
@@ -36,6 +38,8 @@
                 <tree string="Conductor Tree">
                     <field name="name"/>
                     <field name="pais"/>
+                    <field name="licencia"/>
+                    <field name="fecha_caducidad"/>
                     <field name="total_trucks"/>
                 </tree>
             </field>
