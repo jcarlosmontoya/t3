@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Grupo gestion viajes usuarios-->
+        <record id="group_gestion_viajes_user" model="res.groups">
+            <field name="name">Gestion Viajes Usuario</field>
+        </record>
+        <!--Grupo gestion viajes responsables-->
+        <record id="group_gestion_viajes_manager" model="res.groups">
+            <field name="name">Gestion Viajes Responsable</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+    </data>
+</odoo>
